@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,57 +8,54 @@
 </head>
 <body>
 
-```
-<nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <nav>
+        <a href="#" onclick="showBox('about')">About Me</a>
+        <a href="#" onclick="showBox('skills')">Skills</a>
+        <a href="#" onclick="showBox('projects')">Projects</a>
+        <a href="#" onclick="showBox('contact')">Contact</a>
+    </nav>
 
-<h1>Zackery Ensell</h1>
+    <h1>Zackery Ensell</h1>
 
-<div class="card">
-    <h2 id="about">About Me</h2>
-    <p>
-        Aspiring VR developer learning C++, OpenXR, and game development.
-        Interested in virtual reality, computer hardware, and technology.
-    </p>
-</div>
+    <div id="contentBox" class="blank-box">
+        Click a tab above.
+    </div>
 
-<div class="card">
-    <h2 id="skills">Skills</h2>
-    <ul>
-        <li>C++ Programming</li>
-        <li>VR Development</li>
-        <li>Computer Hardware</li>
-        <li>Windows Troubleshooting</li>
-        <li>GitHub</li>
-    </ul>
-</div>
+    <script>
+        function showBox(section) {
+            const box = document.getElementById("contentBox");
 
-<div class="card">
-    <h2 id="projects">Projects</h2>
-    <ul>
-        <li>OpenXR VR Learning Project</li>
-        <li>7 Days to Die VR Server Setup</li>
-        <li>Personal Portfolio Website</li>
-    </ul>
-</div>
+            if (section === "about") {
+                box.innerHTML = `
+                    <h2>About Me</h2>
+                    <div class="image-placeholder">
+                        Blank Image Area
+                    </div>
+                `;
+            }
 
-<div class="card">
-    <h2>Work Experience</h2>
-    <p>
-        Cleaning Technician with experience following procedures,
-        maintaining facilities, and working independently.
-    </p>
-</div>
+            if (section === "skills") {
+                box.innerHTML = `
+                    <h2>Skills</h2>
+                    <p>Put your skills here.</p>
+                `;
+            }
 
-<div class="card">
-    <h2 id="contact">Contact</h2>
-    <p>Email: your-email@example.com</p>
-</div>
-```
+            if (section === "projects") {
+                box.innerHTML = `
+                    <h2>Projects</h2>
+                    <p>Put your projects here.</p>
+                `;
+            }
+
+            if (section === "contact") {
+                box.innerHTML = `
+                    <h2>Contact</h2>
+                    <p>Email: your-email@example.com</p>
+                `;
+            }
+        }
+    </script>
 
 </body>
 </html>
