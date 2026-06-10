@@ -1,54 +1,60 @@
+html {
+scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-    background-color: #121212;
-    color: #e0e0e0;
+font-family: Arial, sans-serif;
+max-width: 1000px;
+margin: auto;
+padding: 20px;
+background-color: #121212;
+color: #e0e0e0;
 }
 
 nav {
-    background-color: #1e1e1e;
-    padding: 15px;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 20px;
+position: sticky;
+top: 0;
+background-color: #1e1e1e;
+padding: 15px;
+text-align: center;
+border-radius: 10px;
+margin-bottom: 20px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+color: white;
+text-decoration: none;
+margin: 0 15px;
+font-weight: bold;
 }
 
 nav a:hover {
-    color: #4da6ff;
+color: #4da6ff;
 }
 
 h1 {
-    color: #4da6ff;
-    text-align: center;
+text-align: center;
+color: #4da6ff;
 }
 
 h2 {
-    color: #4da6ff;
-    border-bottom: 2px solid #4da6ff;
-    padding-bottom: 5px;
+color: #4da6ff;
+border-bottom: 2px solid #4da6ff;
+padding-bottom: 5px;
 }
 
 .card {
-    background: #1e1e1e;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: 1px solid #333;
+background: #1e1e1e;
+padding: 20px;
+margin-bottom: 20px;
+border-radius: 10px;
+border: 1px solid #333;
 }
 
 ul {
-    line-height: 1.8;
+line-height: 1.8;
 }
 
 p {
-    line-height: 1.6;
+line-height: 1.6;
 }
