@@ -1,61 +1,144 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zackery Ensell Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+
+```
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: white;
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    nav {
+        background-color: #1e1e1e;
+        padding: 15px;
+        text-align: center;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    nav a:hover {
+        color: #4da6ff;
+    }
+
+    h1 {
+        text-align: center;
+        color: #4da6ff;
+    }
+
+    .blank-box {
+        min-height: 400px;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #1e1e1e;
+        transition: 0.3s;
+    }
+
+    .image-placeholder {
+        width: 300px;
+        height: 300px;
+        border: 2px dashed white;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+```
+
 </head>
+
 <body>
 
-    <nav>
-        <a href="#" onclick="showBox('about')">About Me</a>
-        <a href="#" onclick="showBox('skills')">Skills</a>
-        <a href="#" onclick="showBox('projects')">Projects</a>
-        <a href="#" onclick="showBox('contact')">Contact</a>
-    </nav>
+```
+<h1>Zackery Ensell</h1>
 
-    <h1>Zackery Ensell</h1>
+<nav>
+    <a onclick="showBox('about')">About Me</a>
+    <a onclick="showBox('skills')">Skills</a>
+    <a onclick="showBox('projects')">Projects</a>
+    <a onclick="showBox('contact')">Contact</a>
+</nav>
 
-    <div id="contentBox" class="blank-box">
-        Click a tab above.
-    </div>
+<div id="contentBox" class="blank-box">
+    <h2>Welcome</h2>
+    <p>Click a tab above.</p>
+</div>
 
-    <script>
-        function showBox(section) {
-            const box = document.getElementById("contentBox");
+<script>
+    function showBox(section) {
+        const box = document.getElementById("contentBox");
 
-            if (section === "about") {
-                box.innerHTML = `
-                    <h2>About Me</h2>
-                    <div class="image-placeholder">
-                        Blank Image Area
-                    </div>
-                `;
-            }
+        if (section === "about") {
+            box.style.backgroundColor = "#000000";
+            box.style.color = "#ffffff";
 
-            if (section === "skills") {
-                box.innerHTML = `
-                    <h2>Skills</h2>
-                    <p>Put your skills here.</p>
-                `;
-            }
-
-            if (section === "projects") {
-                box.innerHTML = `
-                    <h2>Projects</h2>
-                    <p>Put your projects here.</p>
-                `;
-            }
-
-            if (section === "contact") {
-                box.innerHTML = `
-                    <h2>Contact</h2>
-                    <p>Email: your-email@example.com</p>
-                `;
-            }
+            box.innerHTML = `
+                <h2>About Me</h2>
+                <div class="image-placeholder">
+                    Your Picture Here
+                </div>
+                <p>Add information about yourself here.</p>
+            `;
         }
-    </script>
+
+        if (section === "skills") {
+            box.style.backgroundColor = "#ff0000";
+            box.style.color = "#ffffff";
+
+            box.innerHTML = `
+                <h2>Skills</h2>
+                <ul>
+                    <li>C++ Programming</li>
+                    <li>VR Development</li>
+                    <li>Computer Hardware</li>
+                    <li>GitHub</li>
+                </ul>
+            `;
+        }
+
+        if (section === "projects") {
+            box.style.backgroundColor = "#ff8800";
+            box.style.color = "#ffffff";
+
+            box.innerHTML = `
+                <h2>Projects</h2>
+                <ul>
+                    <li>OpenXR VR Project</li>
+                    <li>7 Days To Die VR Setup</li>
+                    <li>Portfolio Website</li>
+                </ul>
+            `;
+        }
+
+        if (section === "contact") {
+            box.style.backgroundColor = "#ffffff";
+            box.style.color = "#000000";
+
+            box.innerHTML = `
+                <h2>Contact</h2>
+                <p>Email: your-email@example.com</p>
+            `;
+        }
+    }
+</script>
+```
 
 </body>
 </html>
