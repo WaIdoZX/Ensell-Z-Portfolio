@@ -1,92 +1,54 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zackery Ensell Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-```
 <h1>Zackery Ensell</h1>
 
 <nav>
-    <a href="#" onclick="showBox('about'); return false;">About Me</a>
-    <a href="#" onclick="showBox('skills'); return false;">Skills</a>
-    <a href="#" onclick="showBox('projects'); return false;">Projects</a>
-    <a href="#" onclick="showBox('contact'); return false;">Contact</a>
+    <button onclick="showBox('about')">About Me</button>
+    <button onclick="showBox('skills')">Skills</button>
+    <button onclick="showBox('projects')">Projects</button>
+    <button onclick="showBox('contact')">Contact</button>
 </nav>
 
 <div id="contentBox" class="blank-box">
     <h2>Welcome</h2>
-    <p>Click a tab above.</p>
+    <p>Click a button above.</p>
 </div>
 
 <script>
-    function showBox(section) {
-        const box = document.getElementById("contentBox");
+function showBox(section) {
+    var box = document.getElementById("contentBox");
 
-        if (section === "about") {
-            box.style.backgroundColor = "#000000";
-            box.style.color = "#ffffff";
-
-            box.innerHTML = `
-                <h2>About Me</h2>
-                <div class="image-placeholder">
-                    Your Picture Here
-                </div>
-                <p>
-                    Aspiring VR developer learning C++, OpenXR,
-                    and game development.
-                </p>
-            `;
-        }
-
-        if (section === "skills") {
-            box.style.backgroundColor = "#ff0000";
-            box.style.color = "#ffffff";
-
-            box.innerHTML = `
-                <h2>Skills</h2>
-                <ul>
-                    <li>C++ Programming</li>
-                    <li>VR Development</li>
-                    <li>Computer Hardware</li>
-                    <li>GitHub</li>
-                    <li>Windows Troubleshooting</li>
-                </ul>
-            `;
-        }
-
-        if (section === "projects") {
-            box.style.backgroundColor = "#ff8800";
-            box.style.color = "#ffffff";
-
-            box.innerHTML = `
-                <h2>Projects</h2>
-                <ul>
-                    <li>OpenXR VR Project</li>
-                    <li>7 Days To Die VR Setup</li>
-                    <li>Portfolio Website</li>
-                </ul>
-            `;
-        }
-
-        if (section === "contact") {
-            box.style.backgroundColor = "#ffffff";
-            box.style.color = "#000000";
-
-            box.innerHTML = `
-                <h2>Contact</h2>
-                <p>Email: your-email@example.com</p>
-            `;
-        }
+    if (section == "about") {
+        box.style.backgroundColor = "black";
+        box.style.color = "white";
+        box.innerHTML = "<h2>About Me</h2><div class='image-placeholder'>Image Here</div>";
     }
+
+    if (section == "skills") {
+        box.style.backgroundColor = "red";
+        box.style.color = "white";
+        box.innerHTML = "<h2>Skills</h2><p>C++, VR Development, Computer Hardware, GitHub</p>";
+    }
+
+    if (section == "projects") {
+        box.style.backgroundColor = "orange";
+        box.style.color = "white";
+        box.innerHTML = "<h2>Projects</h2><p>OpenXR VR Project, Portfolio Website</p>";
+    }
+
+    if (section == "contact") {
+        box.style.backgroundColor = "white";
+        box.style.color = "black";
+        box.innerHTML = "<h2>Contact</h2><p>Email: your-email@example.com</p>";
+    }
+}
 </script>
-```
 
 </body>
 </html>
