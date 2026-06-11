@@ -92,6 +92,12 @@ h1 {
     transform: rotate(90deg);
 }
 
+.menu-buttons button:nth-child(5) {
+    top: 115px;
+    left: 225px;
+    transform: rotate(90deg);
+}
+
 .content {
     width: 80%;
     max-width: 1100px;
