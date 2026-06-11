@@ -19,6 +19,7 @@
         <button onclick="showVR()">VR DEV</button>
         <button onclick="showProjects()">PROJECTS</button>
         <button onclick="showContact()">CONTACT</button>
+        <button onclick="showResume()">RESUME</button>
     </div>
 </div>
 
@@ -36,6 +37,29 @@
 let flashMuted = false;
 let currentFlashPlayer = null;
 
+function showResume() {
+    document.getElementById("content").innerHTML =
+    "<h2>Resume</h2>" +
+    "<h3>Education</h3>" +
+    "<p>Media Communication Technology Certificate</p>" +
+
+    "<h3>Awards</h3>" +
+    "<ul>" +
+    "<li>Career & Technical Education Honor Roll</li>" +
+    "<li>Career & Technical Education Perfect Attendance</li>" +
+    "<li>Career & Technical Education Outstanding Student</li>" +
+    "</ul>" +
+
+    "<h3>Work Experience</h3>" +
+    "<ul>" +
+    "<li>Site Technician - Peregrine Team</li>" +
+    "<li>Cleaning Technician - Intandem</li>" +
+    "<li>Cleaner - CleanMark</li>" +
+    "</ul>" +
+
+    "<p><a href='Resume.pdf' target='_blank'>📄 View Resume PDF</a></p>";
+}
+    
 function showAbout() {
     document.getElementById("content").innerHTML =
     "<h2>About Me</h2><p>Hi, I'm Zackery Ensell. I enjoy VR development, electronics, programming, animation, and game design.</p>";
