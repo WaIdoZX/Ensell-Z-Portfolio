@@ -10,7 +10,6 @@
 <h1>ZACKERY ENSELL</h1>
 
 <div class="corner-menu">
-
     <div class="orb">
         <img src="profile.jpg" alt="Profile">
     </div>
@@ -21,7 +20,6 @@
         <button onclick="showProjects()">PROJECTS</button>
         <button onclick="showContact()">CONTACT</button>
     </div>
-
 </div>
 
 <div class="content" id="content">
@@ -32,6 +30,8 @@
     </p>
 </div>
 
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
 <script>
 function showAbout() {
     document.getElementById("content").innerHTML =
@@ -40,45 +40,33 @@ function showAbout() {
 
 function showVR() {
     document.getElementById("content").innerHTML =
-    "<h2>VR Development</h2>
-        <ul>
-        <li>OpenXR</li>
-        <li>C++</li>
-        <li>Valve Index</li>
-        <li>SteamVR</li>
-        <li>Game Development</li>
-        </ul>";
+    "<h2>VR Development</h2>" +
+    "<ul>" +
+    "<li>OpenXR</li>" +
+    "<li>C++</li>" +
+    "<li>Valve Index</li>" +
+    "<li>SteamVR</li>" +
+    "<li>Game Development</li>" +
+    "</ul>";
 }
 
 function showProjects() {
+    document.getElementById("content").innerHTML =
+    "<h2>Projects</h2>" +
+    "<h3>Fantasy Mine</h3>" +
+    "<p>My Adobe Flash game project, created during my Media Communications program.</p>" +
+    "<div id='flash-player'></div>";
 
-document.getElementById("content").innerHTML = `
+    const ruffle = window.RufflePlayer.newest();
+    const player = ruffle.createPlayer();
+    const container = document.getElementById("flash-player");
 
-<h2>Projects</h2>
+    container.appendChild(player);
 
-<h3>Fantasy Mine</h3>
+    player.style.width = "800px";
+    player.style.height = "600px";
 
-<p>
-My Adobe Flash game project, created during my Media
-Communications program.
-</p>
-
-<div id="flash-player"></div>
-
-`;
-
-const ruffle = window.RufflePlayer.newest();
-const player = ruffle.createPlayer();
-
-document
-.getElementById("flash-player")
-.appendChild(player);
-
-player.style.width = "800px";
-player.style.height = "600px";
-
-player.load("Fantasy-mine.swf");
-
+    player.load("fantasy-mine.swf");
 }
 
 function showContact() {
@@ -86,6 +74,6 @@ function showContact() {
     "<h2>Contact</h2><p>Email: your@email.com</p><p>GitHub: YourGitHub</p>";
 }
 </script>
-<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
 </body>
 </html>
