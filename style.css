@@ -74,7 +74,7 @@ h1 {
 .menu-buttons button:nth-child(4) {
     position: absolute;
     transform: rotate(-80deg);
-    top: 280px;
+    top: 275px;
     left: 0px;
 }
 
