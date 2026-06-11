@@ -33,6 +33,9 @@
 <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 
 <script>
+let flashMuted = false;
+let currentFlashPlayer = null;
+
 function showAbout() {
     document.getElementById("content").innerHTML =
     "<h2>About Me</h2><p>Hi, I'm Zackery Ensell. I enjoy VR development, electronics, programming, animation, and game design.</p>";
@@ -54,7 +57,8 @@ function showProjects() {
     document.getElementById("content").innerHTML =
     "<h2>Projects</h2>" +
     "<h3>Fantasy Mine</h3>" +
-    "<p>My Adobe Flash game project, created during my Media Communications program.</p>" +
+    "<p>My Adobe Flash game project created during my Media Communications program.</p>" +
+    "<button id='muteBtn' onclick='toggleFlashMute()'>🔊 Mute Music</button>" +
     "<div id='flash-player'></div>";
 
     const ruffle = window.RufflePlayer.newest();
@@ -66,12 +70,35 @@ function showProjects() {
     player.style.width = "800px";
     player.style.height = "600px";
 
-    player.load("Fantasy-mine.swf");
+    player.load("fantasy-mine.swf");
+
+    currentFlashPlayer = player;
+    flashMuted = false;
 }
 
 function showContact() {
     document.getElementById("content").innerHTML =
     "<h2>Contact</h2><p>Email: your@email.com</p><p>GitHub: YourGitHub</p>";
+}
+
+function toggleFlashMute() {
+    if (!currentFlashPlayer) return;
+
+    const muteBtn = document.getElementById("muteBtn");
+
+    try {
+        if (!flashMuted) {
+            currentFlashPlayer.volume = 0;
+            muteBtn.innerHTML = "🔈 Unmute Music";
+            flashMuted = true;
+        } else {
+            currentFlashPlayer.volume = 1;
+            muteBtn.innerHTML = "🔊 Mute Music";
+            flashMuted = false;
+        }
+    } catch (error) {
+        alert("Mute may not work with this Flash file in Ruffle.");
+    }
 }
 </script>
 
