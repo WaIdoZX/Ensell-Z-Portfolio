@@ -5,8 +5,6 @@ body {
     color: white;
 }
 
-/* TITLE */
-
 h1 {
     text-align: center;
     color: #39ff14;
@@ -15,40 +13,23 @@ h1 {
     text-shadow: 0 0 15px #39ff14;
 }
 
-/* MENU AREA */
-
 .corner-menu {
     position: fixed;
-    top: 40px;
-    right: 60px;
-
-    width: 500px;
-    height: 300px;
+    top: 80px;
+    right: 160px;
+    width: 260px;
+    height: 260px;
 }
-
-/* PROFILE ORB */
 
 .orb {
     position: absolute;
-    right: 0;
     top: 40px;
-
+    left: 40px;
     width: 180px;
     height: 180px;
-
     border-radius: 50%;
-
-    background:
-    radial-gradient(circle,
-    #ffff88 0%,
-    #7fff00 40%,
-    #00aa00 100%);
-
-    box-shadow:
-    0 0 25px #7fff00,
-    0 0 60px #39ff14,
-    0 0 100px #39ff14;
-
+    background: radial-gradient(circle, #ffff88 0%, #7fff00 40%, #00aa00 100%);
+    box-shadow: 0 0 25px #7fff00, 0 0 60px #39ff14, 0 0 100px #39ff14;
     overflow: hidden;
 }
 
@@ -58,95 +39,66 @@ h1 {
     object-fit: cover;
 }
 
-/* BUTTONS */
-
 .menu-buttons {
     position: absolute;
-    top: 40px;
-    right: 190px;
+    width: 260px;
+    height: 260px;
+    top: 0;
+    left: 0;
 }
 
-/* ABOUT */
-
+/* ABOUT - top */
 .menu-buttons button:nth-child(1) {
-    width: 180px;
-    margin-left: 30px;
-    margin-top: 5px;
+    position: absolute;
+    top: -15px;
+    left: 65px;
 }
 
-/* VR DEV */
-
+/* VR DEV - left */
 .menu-buttons button:nth-child(2) {
-    width: 180px;
-    margin-left: 0px;
-    margin-top: 15px;
+    position: absolute;
+    top: 115px;
+    left: -105px;
 }
 
-/* PROJECTS */
-
+/* PROJECTS - bottom */
 .menu-buttons button:nth-child(3) {
-    width: 180px;
-    margin-left: -15px;
-    margin-top: 15px;
+    position: absolute;
+    top: 245px;
+    left: 45px;
 }
 
-/* CONTACT */
-
+/* CONTACT - right */
 .menu-buttons button:nth-child(4) {
-    width: 180px;
-    margin-left: 10px;
-    margin-top: 15px;
+    position: absolute;
+    top: 115px;
+    left: 225px;
 }
 
 .menu-buttons button {
-
-    display: block;
-
+    width: 150px;
     padding: 12px;
-
-    border: none;
-
     background: #39ff14;
-
     color: black;
-
-    font-size: 20px;
+    border: none;
+    font-size: 18px;
     font-weight: bold;
-
     cursor: pointer;
-
-    box-shadow:
-    0 0 10px #39ff14,
-    0 0 20px #39ff14;
-
-    transition: 0.2s;
+    box-shadow: 0 0 10px #39ff14, 0 0 25px #39ff14;
 }
 
 .menu-buttons button:hover {
-
     background: #ffff55;
-
-    transform: scale(1.05);
 }
 
-/* CONTENT BOX */
-
 .content {
-
     width: 80%;
-
-    max-width: 1200px;
-
-    margin: 380px auto 50px auto;
-
+    max-width: 1100px;
+    margin: 430px auto 50px auto;
     border: 4px solid #39ff14;
-
     padding: 25px;
-
     background: #222;
-
     min-height: 250px;
-
     box-shadow: 0 0 20px #39ff14;
 }
 
