@@ -80,7 +80,7 @@ h1 {
 
 /* PROJECTS */
 .menu-buttons button:nth-child(3) {
-    top: 310px;
+    top: 250px;
     left: -60px;
     transform: rotate(-40deg);
 }
