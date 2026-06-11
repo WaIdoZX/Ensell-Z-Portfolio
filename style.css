@@ -16,28 +16,41 @@ h1 {
 .corner-menu {
     position: fixed;
     top: 80px;
-    right: 160px;
-    width: 260px;
-    height: 260px;
+    right: 120px;
+
+    width: 320px;
+    height: 320px;
+
     z-index: 999;
 }
 
 .orb {
     position: absolute;
-    top: 40px;
-    left: 40px;
-    width: 180px;
-    height: 180px;
+    top: 20px;
+    left: 20px;
+
+    width: 240px;
+    height: 240px;
+
     border-radius: 50%;
-    background: radial-gradient(circle, #ffff88 0%, #7fff00 40%, #00aa00 100%);
-    box-shadow: 0 0 25px #7fff00, 0 0 60px #39ff14, 0 0 100px #39ff14;
     overflow: hidden;
+
+    border: 4px solid #7fff00;
+
+    box-shadow:
+        0 0 15px #39ff14,
+        0 0 40px #39ff14,
+        0 0 80px #39ff14,
+        0 0 120px #39ff14;
+
+    background: #111;
 }
 
 .orb img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 .menu-buttons {
