@@ -1,107 +1,111 @@
-body {
-    margin: 0;
-    background: #202020;
-    color: white;
-    font-family: Verdana, Arial, sans-serif;
+body{
+    margin:0;
+    background:#111;
+    font-family:Arial, sans-serif;
+    color:white;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
-    font-size: 40px;
-    color: #00ff00;
-    text-shadow: 2px 2px black;
+h1{
+    text-align:center;
+    color:#39ff14;
+    font-size:60px;
+    margin-top:20px;
+    text-shadow:0 0 15px #39ff14;
 }
 
-.retro-menu {
-    position: relative;
-    width: 500px;
-    height: 320px;
-    margin: 20px auto;
+.corner-menu{
+    position:fixed;
+    top:30px;
+    right:30px;
+    width:450px;
+    height:300px;
 }
 
-.profile-circle {
-    position: absolute;
-    width: 140px;
-    height: 140px;
-    left: 180px;
-    top: 40px;
-    border: 8px solid black;
-    border-radius: 50%;
-    overflow: hidden;
-    background: white;
-    z-index: 5;
+.orb{
+    position:absolute;
+    left:0;
+    top:50px;
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    #ffff88 0%,
+    #7fff00 40%,
+    #00aa00 100%);
+
+    box-shadow:
+    0 0 25px #7fff00,
+    0 0 60px #39ff14,
+    0 0 100px #39ff14;
+
+    overflow:hidden;
 }
 
-.profile-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.orb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.limb {
-    position: absolute;
-    border: 5px solid black;
-    background: white;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 25px;
-    padding: 10px 18px;
-    font-size: 14px;
+.menu-buttons{
+    position:absolute;
+    left:180px;
+    top:35px;
 }
 
-.limb:hover {
-    background: #00ff00;
+.menu-buttons button{
+
+    display:block;
+
+    width:220px;
+
+    margin:20px 0;
+
+    padding:12px;
+
+    border:none;
+
+    background:#39ff14;
+
+    color:black;
+
+    font-size:20px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 0 10px #39ff14,
+    0 0 20px #39ff14;
 }
 
-.about {
-    left: 20px;
-    top: 60px;
-    transform: rotate(-15deg);
+.menu-buttons button:hover{
+    background:#ffff55;
 }
 
-.skills {
-    left: 20px;
-    top: 130px;
-    transform: rotate(-25deg);
+.content{
+
+    width:80%;
+
+    max-width:1100px;
+
+    margin:420px auto 50px auto;
+
+    border:4px solid #39ff14;
+
+    padding:25px;
+
+    background:#222;
+
+    min-height:250px;
+
+    box-shadow:0 0 20px #39ff14;
 }
 
-.projects {
-    left: 180px;
-    top: 220px;
-    transform: rotate(25deg);
-}
-
-.contact {
-    left: 380px;
-    top: 120px;
-    transform: rotate(90deg);
-}
-
-.content {
-    width: 95%;
-    margin: 20px auto 40px auto;
-    padding: 25px;
-    background: #303030;
-    border: 4px solid #00ff00;
-    box-sizing: border-box;
-    min-height: 160px;
-}
-
-.section {
-    display: none;
-}
-
-.section.active {
-    display: block;
-}
-
-h2 {
-    color: #00ff00;
-    margin-top: 0;
-}
-
-p, li {
-    line-height: 1.6;
+.content h2{
+    color:#39ff14;
 }
