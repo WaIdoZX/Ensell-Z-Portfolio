@@ -65,6 +65,7 @@ h1 {
 /* PROJECTS */
 .menu-buttons button:nth-child(3) {
     position: absolute;
+    transform: rotate(-25deg);
     top: 210px;
     left: -105px;
 }
