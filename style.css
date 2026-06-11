@@ -48,38 +48,8 @@ h1 {
     left: 0;
 }
 
-/* ABOUT */
-.menu-buttons button:nth-child(1) {
-    position: absolute;
-    transform: rotate(25deg);
-    top: 20px;
-    left: -105px;
-}
-
-/* VR DEV */
-.menu-buttons button:nth-child(2) {
-    position: absolute;
-    top: 115px;
-    left: -125px;
-}
-
-/* PROJECTS */
-.menu-buttons button:nth-child(3) {
-    position: absolute;
-    transform: rotate(-25deg);
-    top: 210px;
-    left: -105px;
-}
-
-/* CONTACT - right */
-.menu-buttons button:nth-child(4) {
-    position: absolute;
-    transform: rotate(-80deg);
-    top: 280px;
-    left: 0px;
-}
-
 .menu-buttons button {
+    position: absolute;
     width: 150px;
     padding: 12px;
     background: #39ff14;
@@ -95,6 +65,33 @@ h1 {
     background: #ffff55;
 }
 
+/* ABOUT */
+.menu-buttons button:nth-child(1) {
+    top: 20px;
+    left: -105px;
+    transform: rotate(20deg);
+}
+
+/* VR DEV */
+.menu-buttons button:nth-child(2) {
+    top: 115px;
+    left: -105px;
+}
+
+/* PROJECTS */
+.menu-buttons button:nth-child(3) {
+    top: 210px;
+    left: -105px;
+    transform: rotate(-20deg);
+}
+
+/* CONTACT */
+.menu-buttons button:nth-child(4) {
+    top: 115px;
+    left: 225px;
+    transform: rotate(90deg);
+}
+
 .content {
     width: 80%;
     max-width: 1100px;
@@ -108,4 +105,23 @@ h1 {
 
 .content h2 {
     color: #39ff14;
+}
+
+#flash-player {
+    margin-top: 15px;
+}
+
+#muteBtn {
+    background: #39ff14;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #39ff14;
+}
+
+#muteBtn:hover {
+    background: #ffff55;
 }
