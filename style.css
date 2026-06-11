@@ -72,7 +72,7 @@ h1 {
 
 /* ABOUT */
 .menu-buttons button:nth-child(1) {
-    top: 50px;
+    top: 65px;
     left: 80px;
     transform: rotate(12deg);
 }
