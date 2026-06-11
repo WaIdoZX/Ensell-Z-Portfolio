@@ -1,35 +1,42 @@
-body{
-    margin:0;
-    background:#111;
-    font-family:Arial, sans-serif;
-    color:white;
+body {
+    margin: 0;
+    background: #111;
+    font-family: Arial, sans-serif;
+    color: white;
 }
 
-h1{
-    text-align:center;
-    color:#39ff14;
-    font-size:60px;
-    margin-top:20px;
-    text-shadow:0 0 15px #39ff14;
+/* TITLE */
+
+h1 {
+    text-align: center;
+    color: #39ff14;
+    font-size: 60px;
+    margin-top: 20px;
+    text-shadow: 0 0 15px #39ff14;
 }
 
-.corner-menu{
-    position:fixed;
-    top:30px;
-    right:30px;
-    width:450px;
-    height:300px;
+/* MENU AREA */
+
+.corner-menu {
+    position: fixed;
+    top: 40px;
+    right: 60px;
+
+    width: 500px;
+    height: 300px;
 }
 
-.orb{
-    position:absolute;
-    left:0;
-    top:50px;
+/* PROFILE ORB */
 
-    width:180px;
-    height:180px;
+.orb {
+    position: absolute;
+    right: 0;
+    top: 40px;
 
-    border-radius:50%;
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
 
     background:
     radial-gradient(circle,
@@ -42,70 +49,107 @@ h1{
     0 0 60px #39ff14,
     0 0 100px #39ff14;
 
-    overflow:hidden;
+    overflow: hidden;
 }
 
-.orb img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.orb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.menu-buttons{
-    position:absolute;
-    left:180px;
-    top:35px;
+/* BUTTONS */
+
+.menu-buttons {
+    position: absolute;
+    top: 40px;
+    right: 190px;
 }
 
-.menu-buttons button{
+/* ABOUT */
 
-    display:block;
+.menu-buttons button:nth-child(1) {
+    width: 180px;
+    margin-left: 30px;
+    margin-top: 5px;
+}
 
-    width:220px;
+/* VR DEV */
 
-    margin:20px 0;
+.menu-buttons button:nth-child(2) {
+    width: 180px;
+    margin-left: 0px;
+    margin-top: 15px;
+}
 
-    padding:12px;
+/* PROJECTS */
 
-    border:none;
+.menu-buttons button:nth-child(3) {
+    width: 180px;
+    margin-left: -15px;
+    margin-top: 15px;
+}
 
-    background:#39ff14;
+/* CONTACT */
 
-    color:black;
+.menu-buttons button:nth-child(4) {
+    width: 180px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
 
-    font-size:20px;
-    font-weight:bold;
+.menu-buttons button {
 
-    cursor:pointer;
+    display: block;
+
+    padding: 12px;
+
+    border: none;
+
+    background: #39ff14;
+
+    color: black;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
 
     box-shadow:
     0 0 10px #39ff14,
     0 0 20px #39ff14;
+
+    transition: 0.2s;
 }
 
-.menu-buttons button:hover{
-    background:#ffff55;
+.menu-buttons button:hover {
+
+    background: #ffff55;
+
+    transform: scale(1.05);
 }
 
-.content{
+/* CONTENT BOX */
 
-    width:80%;
+.content {
 
-    max-width:1100px;
+    width: 80%;
 
-    margin:420px auto 50px auto;
+    max-width: 1200px;
 
-    border:4px solid #39ff14;
+    margin: 380px auto 50px auto;
 
-    padding:25px;
+    border: 4px solid #39ff14;
 
-    background:#222;
+    padding: 25px;
 
-    min-height:250px;
+    background: #222;
 
-    box-shadow:0 0 20px #39ff14;
+    min-height: 250px;
+
+    box-shadow: 0 0 20px #39ff14;
 }
 
-.content h2{
-    color:#39ff14;
+.content h2 {
+    color: #39ff14;
 }
