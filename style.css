@@ -50,7 +50,7 @@ h1 {
 /* ABOUT */
 .menu-buttons button:nth-child(1) {
     position: absolute;
-    transform: rotate(20deg);
+    transform: rotate(25deg);
     top: 20px;
     left: -105px;
 }
