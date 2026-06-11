@@ -19,6 +19,7 @@ h1 {
     right: 160px;
     width: 260px;
     height: 260px;
+    z-index: 999;
 }
 
 .orb {
