@@ -75,7 +75,7 @@ h1 {
 /* VR DEV */
 .menu-buttons button:nth-child(2) {
     top: 120px;
-    left: -90px;
+    left: -120px;
 }
 
 /* PROJECTS */
@@ -94,7 +94,7 @@ h1 {
 
 /* RESUMA */
 .menu-buttons button:nth-child(5) {
-    top: 300px;
+    top: 250px;
     left: 50px;
     transform: rotate(-90deg);
 }
