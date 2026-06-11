@@ -1,76 +1,65 @@
-body {
-font-family: Arial, sans-serif;
-background-color: #121212;
-color: white;
-max-width: 1000px;
-margin: auto;
-padding: 20px;
+.retro-menu {
+    position: relative;
+    width: 360px;
+    height: 330px;
+    margin: 40px auto;
 }
 
-nav {
-background-color: #1e1e1e;
-padding: 15px;
-text-align: center;
-border-radius: 10px;
-margin-bottom: 20px;
+.profile-circle {
+    position: absolute;
+    top: 40px;
+    left: 130px;
+    width: 120px;
+    height: 120px;
+    border: 6px solid black;
+    border-radius: 50%;
+    background: white;
+    overflow: hidden;
+    z-index: 5;
 }
 
-nav a {
-color: white;
-text-decoration: none;
-margin: 0 15px;
-font-weight: bold;
-cursor: pointer;
-transition: 0.3s;
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-nav a:hover {
-color: #4da6ff;
-}
-
-h1 {
-text-align: center;
-color: #4da6ff;
-}
-
-.blank-box {
-min-height: 400px;
-border-radius: 10px;
-padding: 20px;
-background-color: #1e1e1e;
-transition: 0.3s;
-}
-
-.image-placeholder {
-width: 300px;
-height: 300px;
-border: 2px dashed white;
-margin: 20px auto;
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: 18px;
-}
-
-h2 {
-margin-top: 0;
-}
-
-ul {
-line-height: 1.8;
-}
-
-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    margin: 5px;
-    border-radius: 8px;
-    cursor: pointer;
+.limb {
+    position: absolute;
+    background: white;
+    border: 5px solid black;
+    color: black;
     font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: "Comic Sans MS", Arial, sans-serif;
 }
 
-button:hover {
-    background-color: #4da6ff;
+.limb:hover {
+    background: #ffcc00;
+}
+
+.limb-about {
+    top: 55px;
+    left: 20px;
+    transform: rotate(-15deg);
+}
+
+.limb-skills {
+    top: 105px;
+    left: 15px;
+    transform: rotate(-25deg);
+}
+
+.limb-projects {
+    top: 165px;
+    left: 150px;
+    transform: rotate(35deg);
+}
+
+.limb-contact {
+    top: 145px;
+    left: 265px;
+    transform: rotate(90deg);
 }
