@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zackery Ensell</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -9,50 +10,32 @@
 
 <h1>ZACKERY ENSELL</h1>
 
-<div class="corner-menu">
+<div class="menu-area">
 
     <div class="orb">
         <img src="profile.jpg" alt="Profile">
     </div>
 
-    <div class="menu-buttons">
-        <button onclick="showAbout()">ABOUT</button>
-        <button onclick="showVR()">VR DEV</button>
-        <button onclick="showProjects()">PROJECTS</button>
-        <button onclick="showContact()">CONTACT</button>
-    </div>
+    <button class="about-btn">ABOUT</button>
+
+    <button class="vr-btn">VR DEV</button>
+
+    <button class="projects-btn">PROJECTS</button>
+
+    <button class="contact-btn">CONTACT</button>
 
 </div>
 
-<div class="content" id="content">
+<div class="content-box">
+
     <h2>About Me</h2>
+
     <p>
         Hi, I'm Zackery Ensell. I enjoy VR development,
         electronics, programming, animation, and game design.
     </p>
+
 </div>
-
-<script>
-function showAbout() {
-    document.getElementById("content").innerHTML =
-    "<h2>About Me</h2><p>Hi, I'm Zackery Ensell. I enjoy VR development, electronics, programming, animation, and game design.</p>";
-}
-
-function showVR() {
-    document.getElementById("content").innerHTML =
-    "<h2>VR Development</h2><ul><li>OpenXR</li><li>C++</li><li>Valve Index</li><li>SteamVR</li><li>Game Development</li></ul>";
-}
-
-function showProjects() {
-    document.getElementById("content").innerHTML =
-    "<h2>Projects</h2><ul><li>Fantasy Mine</li><li>VR Learning Project</li><li>Portfolio Website</li><li>OpenXR Experiments</li></ul>";
-}
-
-function showContact() {
-    document.getElementById("content").innerHTML =
-    "<h2>Contact</h2><p>Email: your@email.com</p><p>GitHub: YourGitHub</p>";
-}
-</script>
 
 </body>
 </html>
