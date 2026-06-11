@@ -1,176 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Zackery Ensell Portfolio</title>
-
-<style>
-body {
-    margin: 0;
-    background: #888;
-    font-family: "Comic Sans MS", Arial, sans-serif;
-    color: black;
-}
-
-.portfolio-bar {
-    width: 260px;
-    margin: 20px 0 0 30px;
-    background: white;
-    border: 3px solid black;
-    padding: 5px 15px;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.figure {
-    position: relative;
-    width: 520px;
-    height: 270px;
-    margin: 10px auto 20px auto;
-}
-
-.head {
-    position: absolute;
-    top: 10px;
-    right: -900px;
-    width: 160px;
-    height: 160px;
-    background: white;
-    border: 8px solid black;
-    border-radius: 50%;
-    overflow: hidden;
-    z-index: 5;
-}
-
-.head img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.tab {
-    position: absolute;
-    background: white;
-    border: 6px solid black;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 8px 25px;
-    font-size: 18px;
-    border-radius: 8px;
-}
-
-.tab:hover {
-    background: #00ff44;
-}
-
-.about {
-    top: 25px;
-    right: 205px;
-    transform: rotate(-12deg);
-}
-
-.vr {
-    top: 85px;
-    right: 220px;
-    transform: rotate(-25deg);
-}
-
-.projects {
-    top: 150px;
-    right: 170px;
-    transform: rotate(35deg);
-}
-
-.contact {
-    top: 120px;
-    right: 5px;
-    transform: rotate(80deg);
-}
-
-.content-box {
-    width: 82%;
-    min-height: 230px;
-    margin: 30px auto;
-    background: white;
-    border: 4px solid black;
-    padding: 25px;
-    box-sizing: border-box;
-    font-size: 20px;
-}
-
-h2 {
-    margin-top: 0;
-}
-
-ul {
-    line-height: 1.7;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Zackery Ensell</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="portfolio-bar">Portfolio</div>
+<h1>ZACKERY ENSELL</h1>
 
-<div class="figure">
-    <button class="tab about" onclick="showText('about')">About</button>
-    <button class="tab vr" onclick="showText('vr')">VR Dev</button>
-    <button class="tab projects" onclick="showText('projects')">Projects</button>
-    <button class="tab contact" onclick="showText('contact')">Contact</button>
+<div class="corner-menu">
 
-    <div class="head">
-        <img src="profile.jpg" alt="Profile Picture">
+    <div class="orb">
+        <img src="profile.jpg" alt="Profile">
     </div>
+
+    <div class="menu-buttons">
+
+        <button onclick="showAbout()">ABOUT</button>
+
+        <button onclick="showVR()">VR DEV</button>
+
+        <button onclick="showProjects()">PROJECTS</button>
+
+        <button onclick="showContact()">CONTACT</button>
+
+    </div>
+
 </div>
 
-<div id="infoBox" class="content-box">
+<div class="content" id="content">
+
     <h2>About Me</h2>
+
     <p>
-        Hi, I'm Zackery Ensell. I enjoy VR development, electronics,
-        programming, animation, and game design.
+        Hi, I'm Zackery Ensell. I enjoy VR development,
+        electronics, programming, animation, and game design.
     </p>
+
 </div>
 
 <script>
-function showText(section) {
-    var box = document.getElementById("infoBox");
 
-    if (section === "about") {
-        box.innerHTML =
-        "<h2>About Me</h2>" +
-        "<p>Hi, I'm Zackery Ensell. I enjoy VR development, electronics, programming, animation, and game design.</p>";
-    }
+function showAbout() {
 
-    if (section === "vr") {
-        box.innerHTML =
-        "<h2>VR Development</h2>" +
-        "<ul>" +
-        "<li>C++ Programming</li>" +
-        "<li>OpenXR</li>" +
-        "<li>Valve Index / SteamVR</li>" +
-        "<li>Computer Hardware</li>" +
-        "<li>Windows Troubleshooting</li>" +
-        "</ul>";
-    }
+document.getElementById("content").innerHTML = `
+<h2>About Me</h2>
+<p>
+Hi, I'm Zackery Ensell. I enjoy VR development,
+electronics, programming, animation, and game design.
+</p>
+`;
 
-    if (section === "projects") {
-        box.innerHTML =
-        "<h2>Projects</h2>" +
-        "<ul>" +
-        "<li>OpenXR VR Learning Project</li>" +
-        "<li>Fantasy Mine Flash Project</li>" +
-        "<li>Personal Portfolio Website</li>" +
-        "<li>7 Days to Die VR Server Setup</li>" +
-        "</ul>";
-    }
-
-    if (section === "contact") {
-        box.innerHTML =
-        "<h2>Contact</h2>" +
-        "<p>Email: your-email@example.com</p>" +
-        "<p>GitHub: WaldoZX</p>";
-    }
 }
+
+function showVR() {
+
+document.getElementById("content").innerHTML = `
+<h2>VR Development</h2>
+
+<ul>
+<li>OpenXR</li>
+<li>C++</li>
+<li>Valve Index</li>
+<li>SteamVR</li>
+<li>Game Development</li>
+</ul>
+`;
+
+}
+
+function showProjects() {
+
+document.getElementById("content").innerHTML = `
+<h2>Projects</h2>
+
+<ul>
+<li>Fantasy Mine</li>
+<li>VR Learning Project</li>
+<li>Portfolio Website</li>
+<li>OpenXR Experiments</li>
+</ul>
+`;
+
+}
+
+function showContact() {
+
+document.getElementById("content").innerHTML = `
+<h2>Contact</h2>
+
+<p>Email: your@email.com</p>
+<p>GitHub: YourGitHub</p>
+`;
+
+}
+
 </script>
 
 </body>
