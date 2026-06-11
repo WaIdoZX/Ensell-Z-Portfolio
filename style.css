@@ -73,7 +73,7 @@ h1 {
 /* CONTACT - right */
 .menu-buttons button:nth-child(4) {
     position: absolute;
-    transform: rotate(-95deg);
+    transform: rotate(-80deg);
     top: 300px;
     left: 0px;
 }
