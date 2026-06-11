@@ -91,19 +91,19 @@ h1 {
     transform: rotate(0deg);
 }
 
-/* CONTACT */
-.menu-buttons button:nth-child(4) {
+/* RESUME */
+.menu-buttons button:nth-child(5) {
     top: 240px;
     left: 80px;
     transform: rotate(0deg);
-}
-
-/* RESUME */
-.menu-buttons button:nth-child(5) {
-    top: 300px;
-    left: 80px;
+    
+/* CONTACT */
+.menu-buttons button:nth-child(4) {
+    top: 400px;
+    left: 0px;
     transform: rotate(0deg);
 }
+
 
 .content {
     width: 80%;
