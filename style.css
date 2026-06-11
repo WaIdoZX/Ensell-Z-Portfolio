@@ -92,9 +92,9 @@ h1 {
     transform: rotate(90deg);
 }
 
-/* RESUMA */
+/* RESUME */
 .menu-buttons button:nth-child(5) {
-    top: 290px;
+    top: 285px;
     left: 50px;
     transform: rotate(-90deg);
 }
