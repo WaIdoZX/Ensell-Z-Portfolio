@@ -1,65 +1,112 @@
-.retro-menu {
-    position: relative;
-    width: 360px;
-    height: 330px;
-    margin: 40px auto;
+body{
+    margin:0;
+    background:#202020;
+    color:white;
+    font-family:Verdana, Arial, sans-serif;
 }
 
-.profile-circle {
-    position: absolute;
-    top: 40px;
-    left: 130px;
-    width: 120px;
-    height: 120px;
-    border: 6px solid black;
-    border-radius: 50%;
-    background: white;
-    overflow: hidden;
-    z-index: 5;
+header{
+    text-align:center;
+    padding:20px;
+    font-size:40px;
+    color:#00ff00;
+    text-shadow:2px 2px black;
 }
 
-.profile-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.retro-menu{
+    position:relative;
+    width:500px;
+    height:320px;
+    margin:20px auto;
 }
 
-.limb {
-    position: absolute;
-    background: white;
-    border: 5px solid black;
-    color: black;
-    font-weight: bold;
-    padding: 8px 18px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-family: "Comic Sans MS", Arial, sans-serif;
+/* HEAD */
+.profile-circle{
+    position:absolute;
+    width:140px;
+    height:140px;
+    left:180px;
+    top:40px;
+
+    border:8px solid black;
+    border-radius:50%;
+    overflow:hidden;
+    background:white;
 }
 
-.limb:hover {
-    background: #ffcc00;
+.profile-circle img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.limb-about {
-    top: 55px;
-    left: 20px;
-    transform: rotate(-15deg);
+/* BUTTONS */
+.limb{
+    position:absolute;
+    border:5px solid black;
+    background:white;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:25px;
+    padding:10px 18px;
+    font-size:18px;
 }
 
-.limb-skills {
-    top: 105px;
-    left: 15px;
-    transform: rotate(-25deg);
+.limb:hover{
+    background:#00ff00;
 }
 
-.limb-projects {
-    top: 165px;
-    left: 150px;
-    transform: rotate(35deg);
+/* LEFT ARM */
+.about{
+    left:20px;
+    top:60px;
+    transform:rotate(-15deg);
 }
 
-.limb-contact {
-    top: 145px;
-    left: 265px;
-    transform: rotate(90deg);
+/* LEFT LEG */
+.skills{
+    left:20px;
+    top:130px;
+    transform:rotate(-25deg);
+}
+
+/* RIGHT LEG */
+.projects{
+    left:180px;
+    top:220px;
+    transform:rotate(25deg);
+}
+
+/* RIGHT ARM */
+.contact{
+    left:380px;
+    top:120px;
+    transform:rotate(90deg);
+}
+
+/* CONTENT BOX */
+.content{
+    width:900px;
+    max-width:90%;
+    margin:40px auto;
+
+    padding:25px;
+
+    background:#303030;
+    border:4px solid #00ff00;
+
+    box-sizing:border-box;
+}
+
+.section{
+    display:none;
+}
+
+.section.active{
+    display:block;
+}
+
+h2{
+    color:#00ff00;
 }
