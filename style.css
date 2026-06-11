@@ -47,25 +47,25 @@ h1 {
     left: 0;
 }
 
-/* ABOUT - top */
+/* ABOUT */
 .menu-buttons button:nth-child(1) {
     position: absolute;
-    top: -15px;
-    left: 65px;
+    top: 20px;
+    left: -105px;
 }
 
-/* VR DEV - left */
+/* VR DEV */
 .menu-buttons button:nth-child(2) {
     position: absolute;
     top: 115px;
     left: -105px;
 }
 
-/* PROJECTS - bottom */
+/* PROJECTS */
 .menu-buttons button:nth-child(3) {
     position: absolute;
-    top: 245px;
-    left: 45px;
+    top: 210px;
+    left: -105px;
 }
 
 /* CONTACT - right */
