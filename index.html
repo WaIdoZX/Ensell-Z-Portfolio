@@ -56,10 +56,21 @@ function showVR() {
 function showProjects() {
     document.getElementById("content").innerHTML =
     "<h2>Projects</h2>" +
+
     "<h3>Fantasy Mine</h3>" +
-    "<p>Date It was made: 4/18/2013</p>"+
-    "<p>My Adobe Flash game project created during my Media Communications program.</p>" +
+
+    "<p><strong>Date Created:</strong> April 18, 2013</p>" +
+
+    "<p><strong>Role:</strong> Graphic Design and Animation</p>" +
+
+    "<p><strong>Team Members:</strong> Zackery Ensell and William Riley</p>" +
+
+    "<p><strong>Music:</strong> Original music composed by Yoko Shimomura (copyright belongs to the original creator).</p>" +
+
+    "<p><strong>Description:</strong> Fantasy Mine is an Adobe Flash animation/game project created during my Media Communications program. I worked on the graphic design, animation, visual effects, and project development.</p>" +
+
     "<button id='muteBtn' onclick='toggleFlashMute()'>🔊 Mute Music</button>" +
+
     "<div id='flash-player'></div>";
 
     const ruffle = window.RufflePlayer.newest();
