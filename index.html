@@ -40,12 +40,45 @@ function showAbout() {
 
 function showVR() {
     document.getElementById("content").innerHTML =
-    "<h2>VR Development</h2><ul><li>OpenXR</li><li>C++</li><li>Valve Index</li><li>SteamVR</li><li>Game Development</li></ul>";
+    "<h2>VR Development</h2>
+        <ul>
+        <li>OpenXR</li>
+        <li>C++</li>
+        <li>Valve Index</li>
+        <li>SteamVR</li>
+        <li>Game Development</li>
+        </ul>";
 }
 
 function showProjects() {
-    document.getElementById("content").innerHTML =
-    "<h2>Projects</h2><ul><li>Fantasy Mine</li><li>VR Learning Project</li><li>Portfolio Website</li><li>OpenXR Experiments</li></ul>";
+
+document.getElementById("content").innerHTML = `
+
+<h2>Projects</h2>
+
+<h3>Fantasy Mine</h3>
+
+<p>
+My Adobe Flash game project, created during my Media
+Communications program.
+</p>
+
+<div id="flash-player"></div>
+
+`;
+
+const ruffle = window.RufflePlayer.newest();
+const player = ruffle.createPlayer();
+
+document
+.getElementById("flash-player")
+.appendChild(player);
+
+player.style.width = "800px";
+player.style.height = "600px";
+
+player.load("fantasy-mine.swf");
+
 }
 
 function showContact() {
@@ -53,6 +86,6 @@ function showContact() {
     "<h2>Contact</h2><p>Email: your@email.com</p><p>GitHub: YourGitHub</p>";
 }
 </script>
-
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </body>
 </html>
