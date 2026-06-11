@@ -94,7 +94,7 @@ h1 {
 
 /* RESUMA */
 .menu-buttons button:nth-child(5) {
-    top: 0px;
+    top: 300px;
     left: 0px;
     transform: rotate(-90deg);
 }
