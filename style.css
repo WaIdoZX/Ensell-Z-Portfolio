@@ -71,7 +71,7 @@ h1 {
     box-shadow: 6px 6px 0 #000;
 }
 
-.menu-buttons button: hover {
+.menu-buttons button:hover {
     background: #ffff55;
 }
 
