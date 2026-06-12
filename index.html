@@ -122,8 +122,38 @@ function showContact() {
 }
 
 function showPhotogathery() {
-    document.getElementById("content").innerHTML =
-    "<h2>Photogathery</h2><p>Email: zackery.ensell@outlook.com</p><p>GitHub: YourGitHub</p>";
+
+document.getElementById("content").innerHTML = `
+
+<h2>Photography Gallery</h2>
+
+<div class="gallery">
+
+<img src="photo1.jpg" onclick="openImage(this.src)">
+<img src="photo2.jpg" onclick="openImage(this.src)">
+<img src="photo3.jpg" onclick="openImage(this.src)">
+<img src="photo4.jpg" onclick="openImage(this.src)">
+
+</div>
+
+`;
+
+}
+
+function openImage(src) {
+
+document.getElementById("modalImage").src = src;
+
+document.getElementById("imageModal").style.display =
+"flex";
+
+}
+
+function closeImage() {
+
+document.getElementById("imageModal").style.display =
+"none";
+
 }
 
 function toggleFlashMute() {
@@ -145,19 +175,6 @@ function toggleFlashMute() {
         alert("Mute may not work with this Flash file in Ruffle.");
     }
 }
-
-    <div class="gallery">
-
-    <img src="photo1.jpg" onclick="openImage(this.src)">
-    <img src="photo2.jpg" onclick="openImage(this.src)">
-    <img src="photo3.jpg" onclick="openImage(this.src)">
-    <img src="photo4.jpg" onclick="openImage(this.src)">
-
-</div>
-
-<div id="imageModal" class="modal" onclick="closeImage()">
-    <img id="modalImage">
-</div>
 </script>
 
 </body>
