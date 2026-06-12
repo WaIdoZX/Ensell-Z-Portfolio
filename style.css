@@ -110,6 +110,12 @@ h1 {
     transform: rotate(0deg);
 }
 
+/* PHOTOGATHERY */
+.menu-buttons button:nth-child(4) {
+    top: 250px;
+    left: 150px;
+    transform: rotate(0deg);
+}
 
 .content {
     width: 80%;
