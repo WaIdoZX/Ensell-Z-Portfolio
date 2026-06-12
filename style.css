@@ -303,10 +303,3 @@ h1 {
         height: auto;
     }
 }
-
-.rotate-cert {
-    transform: rotate(90deg);
-    width: 160px;
-    height: 220px;
-    object-fit: cover;
-}
