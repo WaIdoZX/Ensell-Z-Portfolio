@@ -65,9 +65,7 @@ h1 {
     font-size: 13px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow:
-        0 0 15px #39ff14,
-        inset 0 0 15px #88ff00;
+    box-shadow: 6px 6px 0 #000;
 }
 
 .menu-buttons button: hover {
