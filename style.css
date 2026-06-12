@@ -234,3 +234,21 @@ h1 {
 .photo-controls button:hover {
     background: #ffffcc;
 }
+
+.job-card {
+    background: #dcdcdc;
+    margin: 20px;
+    padding: 15px;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+}
+
+.job-card h3 {
+    margin-top: 0;
+    background: #000080;
+    color: white;
+    padding: 6px;
+}
