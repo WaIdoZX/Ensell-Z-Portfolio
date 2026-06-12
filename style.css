@@ -70,7 +70,7 @@ h1 {
         inset 0 0 15px #88ff00;
 }
 
-.menu-buttons button:hover {
+.menu-buttons button: hover {
     background: #ffff55;
 }
 
