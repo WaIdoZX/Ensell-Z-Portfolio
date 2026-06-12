@@ -57,7 +57,7 @@ h1 {
 
 .menu-buttons button {
     position: absolute;
-    width: 110px;
+    width: auto; /*width: 110px;*/
     padding: 8px;
     background: linear-gradient(to right, #000080, #1084d0);
     color: white;
