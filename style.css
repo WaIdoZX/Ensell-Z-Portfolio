@@ -61,12 +61,12 @@ h1 {
 
 .menu-buttons button {
     position: absolute;
-    width: 190px;
-    padding: 14px;
+    width: 110px;
+    padding: 8px;
     background: linear-gradient(#aaff00, #39ff14);
     color: black;
     border: 2px solid #aaff00;
-    font-size: 22px;
+    font-size: 13px;
     font-weight: bold;
     cursor: pointer;
     box-shadow:
