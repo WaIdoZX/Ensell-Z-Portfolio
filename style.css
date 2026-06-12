@@ -81,28 +81,28 @@ h1 {
 /* ABOUT */
 .menu-buttons button:nth-child(1) {
     top: 30px;
-    left: 80px;
+    left: 200px;
     transform: rotate(0deg);
 }
 
 /* VR DEV */
 .menu-buttons button:nth-child(2) {
     top: 100px;
-    left: 80px;
+    left: 200px;
     transform: rotate(0deg);
 }
 
 /* PROJECTS */
 .menu-buttons button:nth-child(3) {
     top: 170px;
-    left: 80px;
+    left: 200px;
     transform: rotate(0deg);
 }
 
 /* RESUME */
 .menu-buttons button:nth-child(5) {
     top: 240px;
-    left: 80px;
+    left: 200px;
     transform: rotate(0deg);
 }
 
