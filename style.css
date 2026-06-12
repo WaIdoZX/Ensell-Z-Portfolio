@@ -59,7 +59,7 @@ h1 {
     position: absolute;
     width: 110px;
     padding: 8px;
-    background: linear-gradient(#aaff00, #39ff14);
+    background: linear-gradient(to right, #000080, #1084d0);
     color: black;
     border: 2px solid #aaff00;
     font-size: 13px;
