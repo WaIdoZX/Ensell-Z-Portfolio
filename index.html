@@ -145,6 +145,19 @@ function toggleFlashMute() {
         alert("Mute may not work with this Flash file in Ruffle.");
     }
 }
+
+    <div class="gallery">
+
+    <img src="photo1.jpg" onclick="openImage(this.src)">
+    <img src="photo2.jpg" onclick="openImage(this.src)">
+    <img src="photo3.jpg" onclick="openImage(this.src)">
+    <img src="photo4.jpg" onclick="openImage(this.src)">
+
+</div>
+
+<div id="imageModal" class="modal" onclick="closeImage()">
+    <img id="modalImage">
+</div>
 </script>
 
 </body>
