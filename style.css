@@ -211,3 +211,26 @@ h1 {
     max-width: 90%;
     max-height: 90%;
 }
+
+.photo-controls {
+    padding: 15px 20px;
+}
+
+.photo-controls button {
+    background: #c0c0c0;
+    color: black;
+    font-family: "MS Sans Serif", Arial, sans-serif;
+    font-weight: bold;
+    padding: 8px 12px;
+    margin: 5px;
+    cursor: pointer;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+}
+
+.photo-controls button:hover {
+    background: #ffffcc;
+}
