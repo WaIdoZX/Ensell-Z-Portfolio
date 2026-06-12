@@ -42,272 +42,357 @@ let flashMuted = false;
 let currentFlashPlayer = null;
 
 function showResume() {
-    document.getElementById("content").innerHTML =
-    "<h2>Resume</h2>" +
+    document.getElementById("content").innerHTML = `
 
-    "<h3>Education</h3>" +
+    <h2>Resume</h2>
 
-    "<div class='job-card'>" +
-    "<h3>GED Program</h3>" +
-    "<p><strong>Location:</strong> Olean, NY</p>" +
-    "<p><strong>Date:</strong> September 2014 – October 2014</p>" +
-    "<p><strong>Level:</strong> High school or equivalent</p>" +
-    "</div>" +
+    <h3>Education</h3>
 
-    "<div class='job-card'>" +
-    "<h3>Certificate in Multimedia Communication Technology</h3>" +
-    "<p><strong>School:</strong> BOCES</p>" +
-    "<p><strong>Location:</strong> Olean, NY</p>" +
-    "<p><strong>Date:</strong> January 2011 – June 2013</p>" +
-    "<p><strong>Focus:</strong> Media communication, web design, animation, layout design, photography, and game design.</p>" +
-    "</div>" +
+    <div class="job-card">
+        <h3>GED Program</h3>
+        <p><strong>Location:</strong> Olean, NY</p>
+        <p><strong>Date:</strong> September 2014 – October 2014</p>
+        <p><strong>Level:</strong> High school or equivalent</p>
+    </div>
 
-    "<h3>Certificates and Awards</h3>" +
+    <div class="job-card">
+        <h3>Certificate in Multimedia Communication Technology</h3>
+        <p><strong>School:</strong> BOCES / Career & Tech Center at Olean</p>
+        <p><strong>Location:</strong> Olean, NY</p>
+        <p><strong>Date:</strong> January 2011 – June 2013</p>
+        <p><strong>Focus:</strong> Media communication, web design, animation, layout design, photography, and game design.</p>
+    </div>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>Honor Roll - Media Communications Technology 2</h3>" +
-    "<p><strong>Date:</strong> October 26, 2012</p>" +
-    "<p>Awarded for academic achievement.</p>" +
-    "</div>" +
-    "<img src='certificates/img012.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <h3>Certificates and Awards</h3>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>Perfect Attendance - Media Communications Technology 2</h3>" +
-    "<p><strong>Date:</strong> October 26, 2012</p>" +
-    "<p>Awarded for perfect attendance.</p>" +
-    "</div>" +
-    "<img src='certificates/img013.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>High School Equivalency Diploma</h3>
+            <p><strong>School:</strong> New York State Education Department</p>
+            <p><strong>Date:</strong> November 2015</p>
+            <p>High School Equivalency Diploma.</p>
+        </div>
+        <img src="certificates/img025.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>Perfect Attendance - Career Foundations 2</h3>" +
-    "<p><strong>Date:</strong> October 26, 2012</p>" +
-    "<p>Awarded for perfect attendance.</p>" +
-    "</div>" +
-    "<img src='certificates/img014.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>Media Communications Technology Certificate</h3>
+            <p><strong>School:</strong> BOCES / Career & Tech Center at Olean</p>
+            <p><strong>Date:</strong> June 14, 2013</p>
+            <p>Completed the Media Communications Technology program.</p>
+        </div>
+        <img src="certificates/img026.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>Honor Roll - Career Foundations 2</h3>" +
-    "<p><strong>Date:</strong> June 1, 2012</p>" +
-    "<p>Awarded for academic achievement.</p>" +
-    "</div>" +
-    "<img src='certificates/img011.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>Individualized Education Program Diploma</h3>
+            <p><strong>School:</strong> Olean High School</p>
+            <p><strong>Date:</strong> June 23, 2012</p>
+            <p>Individualized Education Program Diploma.</p>
+        </div>
+        <img src="certificates/img024.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>Honor Roll - Media Communications Technology 1</h3>" +
-    "<p><strong>Date:</strong> March 12, 2012</p>" +
-    "<p>Awarded for academic achievement.</p>" +
-    "</div>" +
-    "<img src='certificates/img010.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>Honor Roll - Media Communications Technology 2</h3>
+            <p><strong>Date:</strong> October 26, 2012</p>
+            <p>Awarded for academic achievement.</p>
+        </div>
+        <img src="certificates/img012.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>Outstanding Student - Career Foundations 2</h3>" +
-    "<p><strong>Date:</strong> January 5, 2012</p>" +
-    "<p>Awarded for excellent attendance, scholastic achievement, and overall contributions.</p>" +
-    "</div>" +
-    "<img src='certificates/img007.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>Perfect Attendance - Media Communications Technology 2</h3>
+            <p><strong>Date:</strong> October 26, 2012</p>
+            <p>Awarded for perfect attendance.</p>
+        </div>
+        <img src="certificates/img013.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>Honor Roll - Career Foundations 2</h3>" +
-    "<p><strong>Date:</strong> January 5, 2012</p>" +
-    "<p>Awarded for academic achievement.</p>" +
-    "</div>" +
-    "<img src='certificates/img008.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>Perfect Attendance - Career Foundations 2</h3>
+            <p><strong>Date:</strong> October 26, 2012</p>
+            <p>Awarded for perfect attendance.</p>
+        </div>
+        <img src="certificates/img014.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>Honor Roll - Media Communications Technology 1</h3>" +
-    "<p><strong>Date:</strong> January 5, 2012</p>" +
-    "<p>Awarded for academic achievement.</p>" +
-    "</div>" +
-    "<img src='certificates/img009.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>Honor Roll - Career Foundations 2</h3>
+            <p><strong>Date:</strong> June 1, 2012</p>
+            <p>Awarded for academic achievement.</p>
+        </div>
+        <img src="certificates/img011.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>Perfect Attendance - Media Communications Technology 1</h3>" +
-    "<p><strong>Date:</strong> October 17, 2011</p>" +
-    "<p>Awarded for perfect attendance.</p>" +
-    "</div>" +
-    "<img src='certificates/img020.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>Honor Roll - Media Communications Technology 1</h3>
+            <p><strong>Date:</strong> March 12, 2012</p>
+            <p>Awarded for academic achievement.</p>
+        </div>
+        <img src="certificates/img010.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>Honor Roll - Media Communications Technology 1</h3>" +
-    "<p><strong>Date:</strong> October 17, 2011</p>" +
-    "<p>Awarded for academic achievement.</p>" +
-    "</div>" +
-    "<img src='certificates/img021.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>Outstanding Student - Career Foundations 2</h3>
+            <p><strong>Date:</strong> January 5, 2012</p>
+            <p>Awarded for excellent attendance, scholastic achievement, and overall contributions.</p>
+        </div>
+        <img src="certificates/img007.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>High Honor Roll - Career Foundations 1</h3>" +
-    "<p><strong>Date:</strong> June 17, 2011</p>" +
-    "<p>Awarded for high academic achievement.</p>" +
-    "</div>" +
-    "<img src='certificates/img019.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>Honor Roll - Career Foundations 2</h3>
+            <p><strong>Date:</strong> January 5, 2012</p>
+            <p>Awarded for academic achievement.</p>
+        </div>
+        <img src="certificates/img008.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>Perfect Attendance - Career Foundations 1</h3>" +
-    "<p><strong>Date:</strong> March 15, 2011</p>" +
-    "<p>Awarded for perfect attendance.</p>" +
-    "</div>" +
-    "<img src='certificates/img017.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>Honor Roll - Media Communications Technology 1</h3>
+            <p><strong>Date:</strong> January 5, 2012</p>
+            <p>Awarded for academic achievement.</p>
+        </div>
+        <img src="certificates/img009.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>High Honor Roll - Career Foundations 1</h3>" +
-    "<p><strong>Date:</strong> March 15, 2011</p>" +
-    "<p>Awarded for high academic achievement.</p>" +
-    "</div>" +
-    "<img src='certificates/img018.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>Perfect Attendance - Media Communications Technology 1</h3>
+            <p><strong>Date:</strong> October 17, 2011</p>
+            <p>Awarded for perfect attendance.</p>
+        </div>
+        <img src="certificates/img020.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>High Honor Roll - Career Foundations 1</h3>" +
-    "<p><strong>Date:</strong> January 11, 2011</p>" +
-    "<p>Awarded for high academic achievement.</p>" +
-    "</div>" +
-    "<img src='certificates/img015.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>Honor Roll - Media Communications Technology 1</h3>
+            <p><strong>Date:</strong> October 17, 2011</p>
+            <p>Awarded for academic achievement.</p>
+        </div>
+        <img src="certificates/img021.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>Outstanding Student - Computer Systems Technology 1</h3>" +
-    "<p><strong>Date:</strong> January 11, 2011</p>" +
-    "<p>Awarded for excellent attendance, scholastic achievement, and overall contributions.</p>" +
-    "</div>" +
-    "<img src='certificates/img016.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>High Honor Roll - Career Foundations 1</h3>
+            <p><strong>Date:</strong> June 17, 2011</p>
+            <p>Awarded for high academic achievement.</p>
+        </div>
+        <img src="certificates/img019.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>Honor Roll - Career Foundations 1</h3>" +
-    "<p><strong>Date:</strong> October 19, 2010</p>" +
-    "<p>Awarded for academic achievement.</p>" +
-    "</div>" +
-    "<img src='certificates/img022.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>Perfect Attendance - Career Foundations 1</h3>
+            <p><strong>Date:</strong> March 15, 2011</p>
+            <p>Awarded for perfect attendance.</p>
+        </div>
+        <img src="certificates/img017.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='cert-card'>" +
-    "<div class='cert-text'>" +
-    "<h3>Outstanding Student - Career Foundations 1</h3>" +
-    "<p><strong>Date:</strong> October 19, 2010</p>" +
-    "<p>Awarded for excellent attendance, scholastic achievement, and overall contributions.</p>" +
-    "</div>" +
-    "<img src='certificates/img023.jpg' onclick='openImage(this.src)'>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>High Honor Roll - Career Foundations 1</h3>
+            <p><strong>Date:</strong> March 15, 2011</p>
+            <p>Awarded for high academic achievement.</p>
+        </div>
+        <img src="certificates/img018.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<h3>Work Experience</h3>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>High Honor Roll - Career Foundations 1</h3>
+            <p><strong>Date:</strong> January 11, 2011</p>
+            <p>Awarded for high academic achievement.</p>
+        </div>
+        <img src="certificates/img015.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='job-card'>" +
-    "<h3>Site Technician - Peregrine Team</h3>" +
-    "<p><strong>Location:</strong> Springfield, OH and Plain City, OH</p>" +
-    "<p><strong>Date:</strong> November 2025 – June 2026</p>" +
-    "<p><strong>Job Description:</strong> Helped keep data center rooms clean and ready for servers by controlling dust, cleaning around equipment, and cleaning the inside and outside of machines using proper cleaning procedures.</p>" +
-    "<p><strong>Equipment Used:</strong></p>" +
-    "<ul>" +
-    "<li>Vacuum</li>" +
-    "<li>Broom</li>" +
-    "<li>Anti-static rags</li>" +
-    "<li>Mop</li>" +
-    "<li>Cleaning chemicals</li>" +
-    "<li>Automatic floor scrubber</li>" +
-    "</ul>" +
-    "<p><strong>Skills Used:</strong> Attention to detail, dust control, equipment-safe cleaning, safety awareness, and working in a data center environment.</p>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>Outstanding Student - Computer Systems Technology 1</h3>
+            <p><strong>Date:</strong> January 11, 2011</p>
+            <p>Awarded for excellent attendance, scholastic achievement, and overall contributions.</p>
+        </div>
+        <img src="certificates/img016.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='job-card'>" +
-    "<h3>Cleaner - CleanMark</h3>" +
-    "<p><strong>Location:</strong> Fairborn, OH</p>" +
-    "<p><strong>Date:</strong> September 2024 – November 2025</p>" +
-    "<p><strong>Job Description:</strong> Cleaned and maintained a Best Buy retail building, including the lobby, restrooms, lunch room, office rooms, and other areas of the building. Used cleaning equipment and supplies to keep the site clean, organized, and ready for daily use.</p>" +
-    "<p><strong>Equipment Used:</strong></p>" +
-    "<ul>" +
-    "<li>Vacuum</li>" +
-    "<li>Swiffer</li>" +
-    "<li>Mop</li>" +
-    "<li>Cleaning chemicals</li>" +
-    "<li>Carpet cleaner</li>" +
-    "</ul>" +
-    "<p><strong>Skills Used:</strong> Cleaning procedures, attention to detail, restroom sanitation, floor care, and maintaining a clean retail work environment.</p>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>Honor Roll - Career Foundations 1</h3>
+            <p><strong>Date:</strong> October 19, 2010</p>
+            <p>Awarded for academic achievement.</p>
+        </div>
+        <img src="certificates/img022.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='job-card'>" +
-    "<h3>Cleaning Technician - Intandem</h3>" +
-    "<p><strong>Location:</strong> Olean, NY</p>" +
-    "<p><strong>Date:</strong> March 2021 – October 2024</p>" +
-    "<p><strong>Job Description:</strong> Cleaned and maintained factories, retail stores, and office buildings by sweeping, mopping, vacuuming, dusting, removing trash, and sanitizing work areas. Helped keep buildings clean, organized, and ready for daily use.</p>" +
-    "<p><strong>Equipment Used:</strong></p>" +
-    "<ul>" +
-    "<li>Vacuum</li>" +
-    "<li>Broom / Push broom</li>" +
-    "<li>Cleaning rags</li>" +
-    "<li>Mop</li>" +
-    "<li>Cleaning chemicals</li>" +
-    "<li>Automatic floor scrubber</li>" +
-    "</ul>" +
-    "<p><strong>Skills Used:</strong> Cleaning procedures, attention to detail, safety awareness, time management, and maintaining clean work areas.</p>" +
-    "</div>" +
+    <div class="cert-card">
+        <div class="cert-text">
+            <h3>Outstanding Student - Career Foundations 1</h3>
+            <p><strong>Date:</strong> October 19, 2010</p>
+            <p>Awarded for excellent attendance, scholastic achievement, and overall contributions.</p>
+        </div>
+        <img src="certificates/img023.jpg" onclick="openImage(this.src)">
+    </div>
 
-    "<div class='job-card'>" +
-    "<h3>Back Server - Oishi Sushi and Hibachi</h3>" +
-    "<p><strong>Location:</strong> Olean, NY</p>" +
-    "<p><strong>Date:</strong> July 2014 – February 2020</p>" +
-    "<p><strong>Job Description:</strong> Responsible for nightly setup, resetting tables, preparing the dining area, and delivering food quickly and professionally to guests while following service standards.</p>" +
-    "<p><strong>Skills Used:</strong> Customer service, teamwork, time management, attention to detail, food service, and dining room setup.</p>" +
-    "</div>" +
+    <h3>Skills</h3>
 
-    "<div class='job-card'>" +
-    "<h3>Cashier & Customer Service - KFC / Taco Bell</h3>" +
-    "<p><strong>Location:</strong> Olean, NY</p>" +
-    "<p><strong>Date:</strong> March 2014 – December 2014</p>" +
-    "<p><strong>Job Description:</strong> Assisted customers by taking orders, processing payments, issuing receipts, giving change, and keeping the cash drawer accurate during shifts.</p>" +
-    "<p><strong>Equipment Used:</strong></p>" +
-    "<ul>" +
-    "<li>Cash register / POS system</li>" +
-    "<li>Cash drawer</li>" +
-    "<li>Receipt printer</li>" +
-    "<li>Credit / debit card machine</li>" +
-    "</ul>" +
-    "<p><strong>Skills Used:</strong> Customer service, cash handling, order taking, communication, accuracy, and working in a fast-paced environment.</p>" +
-    "</div>" +
+    <div class="job-card">
+        <h3>Technical & Software Skills</h3>
+        <ul>
+            <li>HTML</li>
+            <li>Microsoft Word</li>
+            <li>Microsoft Excel</li>
+            <li>OpenOffice</li>
+            <li>Adobe Photoshop</li>
+            <li>Adobe InDesign</li>
+            <li>Adobe Illustrator</li>
+            <li>Adobe After Effects</li>
+            <li>Adobe Soundbooth</li>
+            <li>Unity3D</li>
+            <li>3D Max</li>
+            <li>FPS Creator</li>
+        </ul>
+    </div>
 
-    "<div class='job-card'>" +
-    "<h3>Stock Clerk - Walmart</h3>" +
-    "<p><strong>Location:</strong> Olean, NY</p>" +
-    "<p><strong>Date:</strong> June 2013 – December 2013</p>" +
-    "<p><strong>Job Description:</strong> Received, unloaded, unpacked, organized, and stocked merchandise. Helped front and face shelves and displays while performing heavy lifting when needed.</p>" +
-    "<p><strong>Equipment Used:</strong></p>" +
-    "<ul>" +
-    "<li>Stocking carts</li>" +
-    "<li>Box cutter</li>" +
-    "<li>Hand truck</li>" +
-    "<li>Pallet jack</li>" +
-    "</ul>" +
-    "<p><strong>Skills Used:</strong> Stocking, organizing merchandise, heavy lifting, attention to detail, teamwork, and keeping shelves clean and presentable.</p>" +
-    "</div>" +
+    <div class="job-card">
+        <h3>Design & Media Skills</h3>
+        <ul>
+            <li>Web design</li>
+            <li>Animation</li>
+            <li>Game design</li>
+            <li>Layout design</li>
+            <li>Typography</li>
+            <li>Package design</li>
+            <li>Photography</li>
+            <li>Motion graphics</li>
+            <li>Color theory</li>
+            <li>Advertising</li>
+        </ul>
+    </div>
 
-    "<p><a href='Resume.pdf' target='_blank'>📄 View Resume PDF</a></p>";
+    <div class="job-card">
+        <h3>Workplace Skills</h3>
+        <ul>
+            <li>Customer service</li>
+            <li>Communication</li>
+            <li>Teamwork</li>
+            <li>Attention to detail</li>
+            <li>Problem solving</li>
+            <li>Organization</li>
+            <li>Sanitation procedures</li>
+            <li>Compliance</li>
+            <li>Reliability</li>
+            <li>Adaptability</li>
+        </ul>
+    </div>
+
+    <h3>Work Experience</h3>
+
+    <div class="job-card">
+        <h3>Site Technician - Peregrine Team</h3>
+        <p><strong>Location:</strong> Springfield, OH and Plain City, OH</p>
+        <p><strong>Date:</strong> November 2025 – June 2026</p>
+        <p><strong>Job Description:</strong> Helped keep data center rooms clean and ready for servers by controlling dust, cleaning around equipment, and cleaning the inside and outside of machines using proper cleaning procedures.</p>
+        <p><strong>Equipment Used:</strong></p>
+        <ul>
+            <li>Vacuum</li>
+            <li>Broom</li>
+            <li>Anti-static rags</li>
+            <li>Mop</li>
+            <li>Cleaning chemicals</li>
+            <li>Automatic floor scrubber</li>
+        </ul>
+        <p><strong>Skills Used:</strong> Attention to detail, dust control, equipment-safe cleaning, safety awareness, and working in a data center environment.</p>
+    </div>
+
+    <div class="job-card">
+        <h3>Cleaner - CleanMark</h3>
+        <p><strong>Location:</strong> Fairborn, OH</p>
+        <p><strong>Date:</strong> September 2024 – November 2025</p>
+        <p><strong>Job Description:</strong> Cleaned and maintained a Best Buy retail building, including the lobby, restrooms, lunch room, office rooms, and other areas of the building. Used cleaning equipment and supplies to keep the site clean, organized, and ready for daily use.</p>
+        <p><strong>Equipment Used:</strong></p>
+        <ul>
+            <li>Vacuum</li>
+            <li>Swiffer</li>
+            <li>Mop</li>
+            <li>Cleaning chemicals</li>
+            <li>Carpet cleaner</li>
+        </ul>
+        <p><strong>Skills Used:</strong> Cleaning procedures, attention to detail, restroom sanitation, floor care, and maintaining a clean retail work environment.</p>
+    </div>
+
+    <div class="job-card">
+        <h3>Cleaning Technician - Intandem</h3>
+        <p><strong>Location:</strong> Olean, NY</p>
+        <p><strong>Date:</strong> March 2021 – October 2024</p>
+        <p><strong>Job Description:</strong> Cleaned and maintained factories, retail stores, and office buildings by sweeping, mopping, vacuuming, dusting, removing trash, and sanitizing work areas. Helped keep buildings clean, organized, and ready for daily use.</p>
+        <p><strong>Equipment Used:</strong></p>
+        <ul>
+            <li>Vacuum</li>
+            <li>Broom / Push broom</li>
+            <li>Cleaning rags</li>
+            <li>Mop</li>
+            <li>Cleaning chemicals</li>
+            <li>Automatic floor scrubber</li>
+        </ul>
+        <p><strong>Skills Used:</strong> Cleaning procedures, attention to detail, safety awareness, time management, and maintaining clean work areas.</p>
+    </div>
+
+    <div class="job-card">
+        <h3>Back Server - Oishi Sushi and Hibachi</h3>
+        <p><strong>Location:</strong> Olean, NY</p>
+        <p><strong>Date:</strong> July 2014 – February 2020</p>
+        <p><strong>Job Description:</strong> Responsible for nightly setup, resetting tables, preparing the dining area, and delivering food quickly and professionally to guests while following service standards.</p>
+        <p><strong>Skills Used:</strong> Customer service, teamwork, time management, attention to detail, food service, and dining room setup.</p>
+    </div>
+
+    <div class="job-card">
+        <h3>Cashier & Customer Service - KFC / Taco Bell</h3>
+        <p><strong>Location:</strong> Olean, NY</p>
+        <p><strong>Date:</strong> March 2014 – December 2014</p>
+        <p><strong>Job Description:</strong> Assisted customers by taking orders, processing payments, issuing receipts, giving change, and keeping the cash drawer accurate during shifts.</p>
+        <p><strong>Equipment Used:</strong></p>
+        <ul>
+            <li>Cash register / POS system</li>
+            <li>Cash drawer</li>
+            <li>Receipt printer</li>
+            <li>Credit / debit card machine</li>
+        </ul>
+        <p><strong>Skills Used:</strong> Customer service, cash handling, order taking, communication, accuracy, and working in a fast-paced environment.</p>
+    </div>
+
+    <div class="job-card">
+        <h3>Stock Clerk - Walmart</h3>
+        <p><strong>Location:</strong> Olean, NY</p>
+        <p><strong>Date:</strong> June 2013 – December 2013</p>
+        <p><strong>Job Description:</strong> Received, unloaded, unpacked, organized, and stocked merchandise. Helped front and face shelves and displays while performing heavy lifting when needed.</p>
+        <p><strong>Equipment Used:</strong></p>
+        <ul>
+            <li>Stocking carts</li>
+            <li>Box cutter</li>
+            <li>Hand truck</li>
+            <li>Pallet jack</li>
+        </ul>
+        <p><strong>Skills Used:</strong> Stocking, organizing merchandise, heavy lifting, attention to detail, teamwork, and keeping shelves clean and presentable.</p>
+    </div>
+
+    <p><a href="Resume.pdf" target="_blank">📄 View Resume PDF</a></p>
+
+    `;
 }
     
 function showAbout() {
