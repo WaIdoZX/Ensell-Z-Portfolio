@@ -127,41 +127,60 @@ function showPhotogathery() {
 
     <h2>Photography Gallery</h2>
 
+    <div class="photo-controls">
+        <button onclick="filterGallery('all')">All</button>
+        <button onclick="filterGallery('macro')">Macro / Close-Up</button>
+        <button onclick="filterGallery('forest')">Forest & Trails</button>
+        <button onclick="filterGallery('landscape')">Landscape</button>
+        <button onclick="filterGallery('objects')">Objects</button>
+    </div>
+
     <div class="gallery">
 
-        <img src="copyrightPhotos/IMG_9677_watermarked.jpg" onclick="openImage(this.src)">
-        <img src="copyrightPhotos/IMG_7043_watermarked.jpg" onclick="openImage(this.src)">
-        <img src="copyrightPhotos/IMG_9540_watermarked.jpg" onclick="openImage(this.src)">
-        <img src="copyrightPhotos/IMG_9808_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="macro" src="copyrightPhotos/IMG_9677_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="macro" src="copyrightPhotos/IMG_7043_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="macro" src="copyrightPhotos/IMG_9540_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="macro" src="copyrightPhotos/IMG_9808_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="macro" src="copyrightPhotos/IMG_9477_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="macro" src="copyrightPhotos/IMG_9480_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="macro" src="copyrightPhotos/IMG_9583_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="macro" src="copyrightPhotos/IMG_9469_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="macro" src="copyrightPhotos/IMG_9588_watermarked.jpg" onclick="openImage(this.src)">
 
-        <img src="copyrightPhotos/IMG_9477_watermarked.jpg" onclick="openImage(this.src)">
-        <img src="copyrightPhotos/IMG_7060_watermarked.jpg" onclick="openImage(this.src)">
-        <img src="copyrightPhotos/IMG_9480_watermarked.jpg" onclick="openImage(this.src)">
-        <img src="copyrightPhotos/IMG_7054_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="forest" src="copyrightPhotos/IMG_7054_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="forest" src="copyrightPhotos/IMG_9820_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="forest" src="copyrightPhotos/IMG_9465_watermarked.jpg" onclick="openImage(this.src)">
 
-        <img src="copyrightPhotos/IMG_9481_watermarked.jpg" onclick="openImage(this.src)">
-        <img src="copyrightPhotos/IMG_9462_watermarked.jpg" onclick="openImage(this.src)">
-        <img src="copyrightPhotos/IMG_9465_watermarked.jpg" onclick="openImage(this.src)">
-        <img src="copyrightPhotos/IMG_9583_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="landscape" src="copyrightPhotos/IMG_9481_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="landscape" src="copyrightPhotos/IMG_9462_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="landscape" src="copyrightPhotos/IMG_9536_watermarked.jpg" onclick="openImage(this.src)">
 
-        <img src="copyrightPhotos/IMG_9469_watermarked.jpg" onclick="openImage(this.src)">
-        <img src="copyrightPhotos/IMG_9588_watermarked.jpg" onclick="openImage(this.src)">
-        <img src="copyrightPhotos/IMG_9475_watermarked.jpg" onclick="openImage(this.src)">
-        <img src="copyrightPhotos/IMG_9676_watermarked.jpg" onclick="openImage(this.src)">
-
-        <img src="copyrightPhotos/IMG_9536_watermarked.jpg" onclick="openImage(this.src)">
-        <img src="copyrightPhotos/IMG_9820_watermarked.jpg" onclick="openImage(this.src)">
-        <img src="copyrightPhotos/IMG_9671_watermarked.jpg" onclick="openImage(this.src)">
-        <img src="copyrightPhotos/IMG_9674_watermarked.jpg" onclick="openImage(this.src)">
-        
-        <img src="copyrightPhotos/copyrightphoto.png" onclick="openImage(this.src)">
+        <img data-category="objects" src="copyrightPhotos/IMG_7060_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="objects" src="copyrightPhotos/IMG_9475_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="objects" src="copyrightPhotos/IMG_9676_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="objects" src="copyrightPhotos/IMG_9671_watermarked.jpg" onclick="openImage(this.src)">
+        <img data-category="objects" src="copyrightPhotos/IMG_9674_watermarked.jpg" onclick="openImage(this.src)">
 
     </div>
 
     `;
-
 }
 
+function filterGallery(category) {
+
+    const photos = document.querySelectorAll(".gallery img");
+
+    photos.forEach(function(photo) {
+
+        if (category === "all" || photo.dataset.category === category) {
+            photo.style.display = "block";
+        } else {
+            photo.style.display = "none";
+        }
+
+    });
+}
+    
 function openImage(src) {
 
 document.getElementById("modalImage").src = src;
