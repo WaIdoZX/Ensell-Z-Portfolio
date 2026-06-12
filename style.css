@@ -252,3 +252,54 @@ h1 {
     color: white;
     padding: 6px;
 }
+
+.cert-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    background: #dcdcdc;
+    margin: 20px;
+    padding: 15px;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+}
+
+.cert-text {
+    flex: 1;
+}
+
+.cert-card img {
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    cursor: pointer;
+
+    background: white;
+    padding: 5px;
+
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+}
+
+.cert-card img:hover {
+    transform: scale(1.05);
+}
+
+/* Makes certificates stack on phones */
+@media (max-width: 800px) {
+    .cert-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cert-card img {
+        width: 100%;
+        height: auto;
+    }
+}
